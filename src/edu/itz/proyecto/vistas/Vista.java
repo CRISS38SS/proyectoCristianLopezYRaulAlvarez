@@ -34,7 +34,7 @@ public class Vista extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         mnuAbrir = new javax.swing.JMenuItem();
         mnuLimpiar = new javax.swing.JMenuItem();
-        Salir = new javax.swing.JMenuItem();
+        mnusalir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         mnuLexico = new javax.swing.JMenuItem();
 
@@ -56,8 +56,8 @@ public class Vista extends javax.swing.JFrame {
         mnuLimpiar.setText("Limpiar");
         jMenu1.add(mnuLimpiar);
 
-        Salir.setText("Salir");
-        jMenu1.add(Salir);
+        mnusalir.setText("Salir");
+        jMenu1.add(mnusalir);
 
         jmbMenuBar.add(jMenu1);
 
@@ -94,7 +94,6 @@ public class Vista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem Salir;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -103,6 +102,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnuAbrir;
     private javax.swing.JMenuItem mnuLexico;
     private javax.swing.JMenuItem mnuLimpiar;
+    private javax.swing.JMenuItem mnusalir;
     private javax.swing.JTextArea txtCodigo;
     private javax.swing.JTextArea txtMensaje;
     // End of variables declaration//GEN-END:variables

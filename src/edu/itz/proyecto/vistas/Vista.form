@@ -19,7 +19,7 @@
                 <Property name="text" type="java.lang.String" value="Limpiar"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="Salir">
+            <MenuItem class="javax.swing.JMenuItem" name="mnusalir">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Salir"/>
               </Properties>
