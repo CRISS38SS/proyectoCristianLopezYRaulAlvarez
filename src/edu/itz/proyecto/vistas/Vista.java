@@ -48,6 +48,7 @@ public class Vista extends javax.swing.JFrame {
         txtContenido.setRows(5);
         jScrollPane1.setViewportView(txtContenido);
 
+        txtSalida.setEditable(false);
         txtSalida.setColumns(20);
         txtSalida.setRows(5);
         jScrollPane2.setViewportView(txtSalida);
