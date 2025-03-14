@@ -43,7 +43,7 @@ public class Control {
 
     public void limpiar() {
         v.getTxtContenido().setText("");
-        //v.getLblArchivo().setText("");
+        v.getLblRutaArchivo().setText("");
         v.getTxtSalida().setText("");
     }
 
@@ -60,6 +60,10 @@ public class Control {
             System.err.println("error: " + e.getMessage());
         }
         v.getTxtContenido().append(texto + "\n");
+    }
+    
+    public void salir(){
+        System.exit(0);
     }
 
 }

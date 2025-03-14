@@ -137,10 +137,12 @@ public class Vista extends javax.swing.JFrame {
 
     private void mnuLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLimpiarActionPerformed
         // TODO add your handling code here:
+        c.limpiar();
     }//GEN-LAST:event_mnuLimpiarActionPerformed
 
     private void mnuSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSalirActionPerformed
         // TODO add your handling code here:
+        c.salir();
     }//GEN-LAST:event_mnuSalirActionPerformed
 
     private void mnuLexicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLexicoActionPerformed
