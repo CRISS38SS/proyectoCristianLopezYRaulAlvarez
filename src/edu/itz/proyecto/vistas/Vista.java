@@ -34,8 +34,6 @@ public class Vista extends javax.swing.JFrame {
         txtContenido = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtSalida = new javax.swing.JTextArea();
-        lblArchivo = new javax.swing.JLabel();
-        lblRutaArchivo = new javax.swing.JLabel();
         jmbMenuBar = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mnuAbrir = new javax.swing.JMenuItem();
@@ -53,8 +51,6 @@ public class Vista extends javax.swing.JFrame {
         txtSalida.setColumns(20);
         txtSalida.setRows(5);
         jScrollPane2.setViewportView(txtSalida);
-
-        lblArchivo.setText("archivo:");
 
         jMenu1.setText("Archivo");
 
@@ -106,21 +102,13 @@ public class Vista extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblArchivo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblRutaArchivo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblArchivo)
-                    .addComponent(lblRutaArchivo, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
@@ -149,14 +137,6 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mnuLexicoActionPerformed
 
-    public JLabel getLblArchivo() {
-        return lblArchivo;
-    }
-
-    public JLabel getLblRutaArchivo() {
-        return lblRutaArchivo;
-    }
-
     public JTextArea getTxtContenido() {
         return txtContenido;
     }
@@ -172,8 +152,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JMenuBar jmbMenuBar;
-    private javax.swing.JLabel lblArchivo;
-    private javax.swing.JLabel lblRutaArchivo;
     private javax.swing.JMenuItem mnuAbrir;
     private javax.swing.JMenuItem mnuLexico;
     private javax.swing.JMenuItem mnuLimpiar;

@@ -31,7 +31,6 @@ public class Control {
 
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             path = fileChooser.getSelectedFile().getAbsolutePath();
-            v.getLblRutaArchivo().setText(path);
             this.leerArchivo(path);
         }
 
@@ -43,7 +42,6 @@ public class Control {
 
     public void limpiar() {
         v.getTxtContenido().setText("");
-        v.getLblRutaArchivo().setText("");
         v.getTxtSalida().setText("");
     }
 
