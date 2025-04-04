@@ -27,7 +27,7 @@ public class Control {
         this.limpiar();
         String path = null;
         JFileChooser fileChooser = new JFileChooser();
-        int returnValue = fileChooser.showSaveDialog(v);
+        int returnValue = fileChooser.showOpenDialog(v);
 
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             path = fileChooser.getSelectedFile().getAbsolutePath();
