@@ -136,6 +136,7 @@ public class Vista extends javax.swing.JFrame {
 
     private void mnuLexicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuLexicoActionPerformed
         // TODO add your handling code here:
+        c.separarPalabras();
     }//GEN-LAST:event_mnuLexicoActionPerformed
 
     public JTextArea getTxtContenido() {
