@@ -5,7 +5,7 @@
 package edu.itz.proyecto.controles;
 
 import edu.itz.proyecto.vistas.Vista;
-import enumerada.Token;
+import edu.itz.proyecto.enumerada.Token;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
