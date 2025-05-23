@@ -4,13 +4,13 @@
 --------------------------------------------------
 <C1>::= id=num|id=num,<C1>
 
-<C2>::=$|const <C1>;
+<C2>::= Ɛ|const <C1>;
 
 <C3>::=id|id,<C3>
 
-<C4>::=$|var<C3>;
+<C4>::= Ɛ|var<C3>;
 
-<C5>::=$|proced id ; <Bloque> ; <C5>
+<C5>::= Ɛ|proced id ; <Bloque> ; <C5>
 
 
 <Bloque>::= <C2><C4><C5><Proposicion>
@@ -28,7 +28,7 @@
 --------------------------------------------------------
 <E1>::= <Proposicion>| <Proposicion> ; <E1>
 
-<E2>::= print | print <E2>
+<E2>::= id|num
 
 <E3>::= -> | <- 
 
