@@ -1,0 +1,26 @@
+------------GRAMATICA por izquierda-----------------
+
+<Programa>-> <Bloque> .
+--------------------------------------------------------
+<Bloque>-> <C2> <C4> <C5> <Proposicion>
+
+
+<C1>-> id <C1zC1>
+
+<C1zC1> -> = num
+<C1zC1> -> = num , <C1>
+
+<C1>-> id = num
+<C1>-> id = num , <C1>
+
+<C2>-> Ɛ
+<C2>-> const <C1> ;
+
+<C3>-> id
+<C3>-> id , <C3>
+
+<C4>-> Ɛ 
+<C4>-> var <C3> ;
+
+<C5>-> Ɛ 
+<C5>-> proced id ; <Bloque> ; <C5>
