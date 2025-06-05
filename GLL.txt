@@ -1,26 +1,82 @@
-------------GRAMATICA por izquierda-----------------
+------------GLL-----------------
 
 <Programa>-> <Bloque> .
 --------------------------------------------------------
 <Bloque>-> <C2> <C4> <C5> <Proposicion>
 
+<C1>-> id = num <C1zC1>
 
-<C1>-> id <C1zC1>
-
-<C1zC1> -> = num
-<C1zC1> -> = num , <C1>
-
-<C1>-> id = num
-<C1>-> id = num , <C1>
+<C1zC1> -> Ɛ
+<C1zC1> -> , <C1>
 
 <C2>-> Ɛ
 <C2>-> const <C1> ;
 
-<C3>-> id
-<C3>-> id , <C3>
+<C3>-> id <C3zC3>
+
+<C3zC3>-> , <C3>
+<C3zC3>-> Ɛ
 
 <C4>-> Ɛ 
 <C4>-> var <C3> ;
 
 <C5>-> Ɛ 
 <C5>-> proced id ; <Bloque> ; <C5>
+
+-----------------------------------------------------------
+<Condicion>-> <Expresion> <C6> <Expresion>
+
+<C6>-> ==
+<C6>-> <>
+<C6>-> <
+<C6>-> >
+<C6>-> <=
+<C6>-> >=
+----------------------------------------------------------
+<Proposicion>-> {<E1>}
+<Proposicion>-> id = <Expresion>
+<Proposicion>-> print <E2>
+<Proposicion>-> input id
+<Proposicion>-> Exec id
+<Proposicion>-> if <Condicion> : <Proposicion>
+<Proposicion>-> while <Condicion> : <Proposicion>
+<Proposicion>-> for id = <Expresion> <E3> <Expresion> : <Proposicion>
+
+<E1>-> <Proposicion> <E1zE1>
+
+<E1zE1>-> ; <E1>
+<E1zE1>-> Ɛ
+
+<E2>-> id
+<E2>-> num
+
+<E3>-> ->
+<E3>-> <- 
+------------------------------------------------------------------
+<Expresion>-> <D2>
+
+<D1>-> + 
+<D1>-> -
+
+<D2>-> <Termino> <D2zD2>
+
+<D2zD2>-> <D1> <D2>
+<D2zD2>-> Ɛ
+
+--------------------------------------------------------------------
+<Termino>-> <D4>
+
+<D3>-> +
+<D3>-> -
+
+<D4>-> <Factor> <D4zD4>
+
+<D4zD4>-> <D3> <D4>
+<D4zD4>-> Ɛ
+--------------------------------------------------------------------
+<Factor>-> <D5>
+
+<D5>-> ( <Expresion> ) 
+<D5>-> id
+<D5>-> num
+--------------------------------------------------------------------
