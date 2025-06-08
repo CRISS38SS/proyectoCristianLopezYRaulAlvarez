@@ -9,6 +9,8 @@ import edu.itz.proyecto.enumerada.Token;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JFileChooser;
@@ -94,4 +96,23 @@ public class Control {
         }
         v.getTxtSalida().setText(resultado.toString());
     }
+
+    public List<Token> obtenerTokens(String texto) {
+        List<Token> tokens = new ArrayList<>();
+        String regex = "\\bconst\\b|\\bvar\\b|\\bproced\\b|\\bprint\\b|\\binput\\b|\\bexec\\b|\\bif\\b|\\bwhile\\b|\\bfor\\b|[a-zA-Z_][a-zA-Z0-9_]*|0|[1-9][0-9]*|==|<>|<=|>=|->|<-|[\\+\\-*/=.,;:<>{}()]";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(texto);
+
+        while (matcher.find()) {
+            String lexema = matcher.group();
+            Token token = Token.obtenerTokenPara(lexema);
+            if (token != null) {
+                tokens.add(token);
+            }
+        }
+        return tokens;
+    }
+    
+    
 }
