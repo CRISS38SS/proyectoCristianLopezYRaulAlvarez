@@ -1,0 +1,75 @@
+FIRST
+--------FIRST-------------
+FIRST(<C1>) = {id}
+
+
+FIRST(<C1zC1>) = {ε, ,}
+
+
+FIRST(<C2>) = {ε, const}
+
+
+FIRST(<C3>) = {id}
+
+
+FIRST(<C3zC3>) = {ε, ,}
+
+
+FIRST(<C4>) = {ε, var}
+
+
+FIRST(<C5>) = {ε, proced}
+
+
+FIRST(<C6>) = {==, <>, <, >, <=, >=}
+
+
+FIRST(<Condicion>) = FIRST(<Expresion>) = {'(', id, num}
+
+
+FIRST(<Proposicion>) = { '{', id, print, input, Exec, if, while, for } 
+
+
+FIRST(<E1>) = FIRST(<Proposicion>) = { '{', id, print, input, Exec, if, while, for }
+
+
+FIRST(<E1zE1>) = {ε, ;}
+
+
+FIRST(<E2>) = {id, num}
+
+
+FIRST(<E3>) = {->, <-}
+
+
+FIRST(<Expresion>) = FIRST(<D2>) = FIRST(<Termino>) = FIRST(<Factor>) = { '(', id, num }
+
+
+FIRST(<D1>) = {+, -}
+
+
+FIRST(<D2>) = FIRST(<Termino>) = { '(', id, num }
+
+
+FIRST(<D2zD2>) = {+, -, ε}
+
+
+FIRST(<Termino>) = FIRST(<D4>) = FIRST(<Factor>) = { '(', id, num }
+
+
+FIRST(<D3>) = {*, /} 
+
+
+FIRST(<D4>) = FIRST(<Factor>) = { '(', id, num }
+
+
+FIRST(<D4zD4>) = {*, /, ε}
+
+
+FIRST(<Factor>) = { '(', id, num }
+
+   
+FIRST(<Bloque>) = {const, var, proced, '{', id, print, input, Exec, if, while, for}
+
+
+FIRST(<Programa>) = FIRST(<Bloque>) = {const, var, proced, '{', id, print, input, Exec, if, while, for}
