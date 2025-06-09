@@ -41,7 +41,7 @@ public class Vista extends javax.swing.JFrame {
         mnuSalir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         mnuLexico = new javax.swing.JMenuItem();
-        mnuSintactico = new javax.swing.JMenuItem();
+        mnuSintaxis = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,13 +92,13 @@ public class Vista extends javax.swing.JFrame {
         });
         jMenu2.add(mnuLexico);
 
-        mnuSintactico.setText("Sintactico");
-        mnuSintactico.addActionListener(new java.awt.event.ActionListener() {
+        mnuSintaxis.setText("Sintaxis");
+        mnuSintaxis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuSintacticoActionPerformed(evt);
+                mnuSintaxisActionPerformed(evt);
             }
         });
-        jMenu2.add(mnuSintactico);
+        jMenu2.add(mnuSintaxis);
 
         jmbMenuBar.add(jMenu2);
 
@@ -148,9 +148,10 @@ public class Vista extends javax.swing.JFrame {
         c.separarPalabras();
     }//GEN-LAST:event_mnuLexicoActionPerformed
 
-    private void mnuSintacticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSintacticoActionPerformed
+    private void mnuSintaxisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSintaxisActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_mnuSintacticoActionPerformed
+        c.analizarSintaxis();
+    }//GEN-LAST:event_mnuSintaxisActionPerformed
 
     public JTextArea getTxtContenido() {
         return txtContenido;
@@ -171,7 +172,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnuLexico;
     private javax.swing.JMenuItem mnuLimpiar;
     private javax.swing.JMenuItem mnuSalir;
-    private javax.swing.JMenuItem mnuSintactico;
+    private javax.swing.JMenuItem mnuSintaxis;
     private javax.swing.JTextArea txtContenido;
     private javax.swing.JTextArea txtSalida;
     // End of variables declaration//GEN-END:variables

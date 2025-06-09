@@ -44,8 +44,8 @@ public enum Token {
     PARENTESIS_CIERRA("\\)", 30),
     //no son reservadas
     ID("[a-zA-Z_][a-zA-Z0-9_]*", 3),
-    CERO("0", 18),
-    NUM("[1-9][0-9]*", 18);
+    //CERO("0", 18),
+    NUM("0|[1-9][0-9]*", 18);
 
     private final String patron;
     private final int valor;

@@ -114,5 +114,26 @@ public class Control {
         return tokens;
     }
     
-    
+    public void analizarSintaxis() {
+        String texto = v.getTxtContenido().getText();
+        v.getTxtSalida().setText("");
+
+        if (texto.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(v, "No hay texto para analizar");
+            return;
+        }
+
+        try {
+            List<Token> tokens = obtenerTokens(texto); 
+            Sintaxis parser = new Sintaxis(tokens);
+
+            if (parser.analizar()) {
+                v.getTxtSalida().setText("✅✅Análisis sintáctico correcto");
+            } else {
+                v.getTxtSalida().setText("\n❌ Errores:\n" + parser.getErrores());
+            }
+        } catch (Exception e) {
+            v.getTxtSalida().setText("\n⚠️ Error inesperado: " + e.getMessage());
+        }
+    }    
 }
