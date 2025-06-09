@@ -6,6 +6,7 @@ package edu.itz.proyecto.vistas;
 
 import edu.itz.proyecto.controles.Control;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JTextArea;
 
 /**
@@ -159,6 +160,10 @@ public class Vista extends javax.swing.JFrame {
 
     public JTextArea getTxtSalida() {
         return txtSalida;
+    }
+
+    public JMenuItem getMnuSintaxis() {
+        return mnuSintaxis;
     }
 
     

@@ -26,6 +26,8 @@ public class Control {
 
     public Control(Vista v) {
         this.v = v;
+        v.getMnuSintaxis().setEnabled(false);
+
     }
 
     public void abrirArchivo() {
@@ -48,6 +50,7 @@ public class Control {
     public void limpiar() {
         v.getTxtContenido().setText("");
         v.getTxtSalida().setText("");
+        v.getMnuSintaxis().setEnabled(false);        
     }
 
     public void leerArchivo(String rutaArchivo) {
@@ -90,6 +93,7 @@ public class Control {
             Token tipoToken = Token.obtenerTokenPara(token);
             if (tipoToken != null) {
                 resultado.append(token).append("          ").append(tipoToken.getValor()).append("\n");
+                v.getMnuSintaxis().setEnabled(true);
             } else {
                 resultado.append(token).append("          ").append("No reconocido").append("\n");
             }
